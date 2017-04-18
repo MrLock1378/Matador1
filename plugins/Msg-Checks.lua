@@ -13,7 +13,7 @@ local lang = redis:get(hash)
     if msg.text then
   if msg.text:match("(.*)") then
     if not data[tostring(msg.to.id)] and not redis:get(auto_leave) and not is_admin(msg) then
-  tdcli.sendMessage(msg.to.id, "", 0, "_This Is Not One Of My_ *Groups*", 0, "md")
+  tdcli.sendMessage(msg.to.id, "", 0, "_❌This Is Not One Of My_ *Groups*❌ 💥 @LOCKERTEAM™ :) ", 0, "md")
   tdcli.changeChatMemberStatus(chat, our_id, 'Left', dl_cb, nil)
       end
    end
@@ -616,7 +616,7 @@ else
    if not lang then
   tdcli.sendMessage(chat, msg.id, 0, "_User_ "..user_name.." `[ "..user.." ]` _has been_ *kicked* _because of_ *flooding*", 0, "md")
    elseif lang then
-  tdcli.sendMessage(chat, msg.id, 0, "_کاربر_ "..user_name.." `[ "..user.." ]` _به دلیل ارسال پیام های مکرر اخراج شد_", 0, "md")
+  tdcli.sendMessage(chat, msg.id, 0, "_کاربر_ "..user_name.." `[ "..user.." ]` _❌به دلیل ارسال پیام های مکرر اخراج شد_ ❌", 0, "md")
     end
 redis:setex('sender:'..user..':flood', 30, true)
       end
