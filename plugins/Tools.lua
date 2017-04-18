@@ -1,5 +1,5 @@
 --Begin Tools.lua :)
-local SUDO = 377450049 -- put Your ID here! <===
+local SUDO = 374734484 -- put Your ID here! <===
 function exi_files(cpath)
     local files = {}
     local pth = cpath
@@ -602,9 +602,9 @@ if is_sudo(msg) then
 					redis:set('CheckExpire::'..msg.to.id,true)
 				end
 				if lang then
-					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_گروه به مدت 3 دقیقه برای اجرای تنظیمات شارژ میباشد._', 1, 'md')
+					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_گروه به مدت 3 دقیقه برای اجرای تنظیمات شارژ میباشد.  💥 @LOCKERTEAM™ :)_', 1, 'md')
 				else
-					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_Group charged 3 minutes  for settings._', 1, 'md')
+					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_Group charged 3 minutes  for settings. 💥 @LOCKERTEAM™ :) _', 1, 'md')
 				end
 		end
 		if matches[1] == 'rem' then
@@ -660,10 +660,10 @@ if is_sudo(msg) then
 			end
 			if lang then
 				tdcli.sendMessage(SUDO, msg.id_, 1, 'پلن 1 با موفقیت برای گروه '..matches[3]..' فعال شد\nاین گروه تا 30 روز دیگر اعتبار دارد! ( 1 ماه )', 1, 'md')
-				tdcli.sendMessage(matches[3], 0, 1, '_ربات با موفقیت فعال شد و تا 30 روز دیگر اعتبار دارد!_', 1, 'md')
+				tdcli.sendMessage(matches[3], 0, 1, '_ربات با موفقیت فعال شد و تا 30 روز دیگر اعتبار دارد!     💥 @LOCKERTEAM™ :)_', 1, 'md')
 			else
 				tdcli.sendMessage(SUDO, msg.id_, 1, '*Plan 1 Successfully Activated!\nThis group recharged with plan 1 for 30 days (1 Month)*', 1, 'md')
-				tdcli.sendMessage(matches[3], 0, 1, '*Successfully recharged*\n*Expire Date:* `30` *Days (1 Month)*', 1, 'md')
+				tdcli.sendMessage(matches[3], 0, 1, '*Successfully recharged*\n*Expire Date:* `30` *Days (1 Month)* 💥 @LOCKERTEAM™ :) ', 1, 'md')
 			end
 		end
 		end
@@ -676,10 +676,10 @@ if is_sudo(msg) then
 			end
 			if lang then
 				tdcli.sendMessage(SUDO, 0, 1, 'پلن 2 با موفقیت برای گروه '..matches[3]..' فعال شد\nاین گروه تا 90 روز دیگر اعتبار دارد! ( 3 ماه )', 1, 'md')
-				tdcli.sendMessage(matches[3], 0, 1, 'ربات با موفقیت فعال شد و تا 90 روز دیگر اعتبار دارد! ( 3 ماه )', 1, 'md')
+				tdcli.sendMessage(matches[3], 0, 1, 'ربات با موفقیت فعال شد و تا 90 روز دیگر اعتبار دارد! ( 3 ماه )   💥 @LOCKERTEAM™ :)', 1, 'md')
 			else
 				tdcli.sendMessage(SUDO, msg.id_, 1, '*Plan 2 Successfully Activated!\nThis group recharged with plan 2 for 90 days (3 Month)*', 1, 'md')
-				tdcli.sendMessage(matches[3], 0, 1, '*Successfully recharged*\n*Expire Date:* `90` *Days (3 Months)*', 1, 'md')
+				tdcli.sendMessage(matches[3], 0, 1, '*Successfully recharged*\n*Expire Date:* `90` *Days (3 Months)*   💥 @LOCKERTEAM™ :) ', 1, 'md')
 			end
 		end
 		end
@@ -691,10 +691,10 @@ if is_sudo(msg) then
 			end
 			if lang then
 				tdcli.sendMessage(SUDO, msg.id_, 1, 'پلن 3 با موفقیت برای گروه '..matches[3]..' فعال شد\nاین گروه به صورت نامحدود شارژ شد!', 1, 'md')
-				tdcli.sendMessage(matches[3], 0, 1, 'ربات بدون محدودیت فعال شد ! ( نامحدود )', 1, 'md')
+				tdcli.sendMessage(matches[3], 0, 1, 'ربات بدون محدودیت فعال شد ! ( نامحدود )  💥 @LOCKERTEAM™ :)', 1, 'md')
 			else
 				tdcli.sendMessage(SUDO, msg.id_, 1, '*Plan 3 Successfully Activated!\nThis group recharged with plan 3 for unlimited*', 1, 'md')
-				tdcli.sendMessage(matches[3], 0, 1, '*Successfully recharged*\n*Expire Date:* `Unlimited`', 1, 'md')
+				tdcli.sendMessage(matches[3], 0, 1, '*Successfully recharged*\n*Expire Date:* `Unlimited`   💥 @LOCKERTEAM™ :) ', 1, 'md')
 			end
 		end
 		end
@@ -896,11 +896,11 @@ end
 					redis:set('CheckExpire::'..msg.to.id)
 				end
 				if lang then
-					tdcli.sendMessage(msg.to.id, msg.id_, 1, 'ربات با موفقیت تنظیم شد\nمدت فعال بودن ربات در گروه به '..matches[2]..' روز دیگر تنظیم شد...', 1, 'md')
-					tdcli.sendMessage(SUDO, 0, 1, 'ربات در گروه '..matches[2]..' به مدت `'..msg.to.id..'` روز تمدید گردید.', 1, 'md')
+					tdcli.sendMessage(msg.to.id, msg.id_, 1, ' 💥 @LOCKERTEAM™ :)ربات با موفقیت تنظیم شد\nمدت فعال بودن ربات در گروه به '..matches[2]..' روز دیگر تنظیم شد...', 1, 'md')
+					tdcli.sendMessage(SUDO, 0, 1, 'ربات در گروه '..matches[2]..' به مدت `'..msg.to.id..'` روز تمدید گردید. 💥 @LOCKERTEAM™ :)', 1, 'md')
 				else
-					tdcli.sendMessage(msg.to.id, msg.id_, 1, 'ربات با موفقیت تنظیم شد\nمدت فعال بودن ربات در گروه به '..matches[2]..' روز دیگر تنظیم شد...', 1, 'md')
-					tdcli.sendMessage(SUDO, 0, 1, 'ربات در گروه '..matches[2]..' به مدت `'..msg.to.id..'` روز تمدید گردید.', 1, 'md')
+					tdcli.sendMessage(msg.to.id, msg.id_, 1, ' 💥 @LOCKERTEAM™ :)ربات با موفقیت تنظیم شد\nمدت فعال بودن ربات در گروه به '..matches[2]..' روز دیگر تنظیم شد...', 1, 'md')
+					tdcli.sendMessage(SUDO, 0, 1, 'ربات در گروه '..matches[2]..' به مدت `'..msg.to.id..'` روز تمدید گردید. 💥 @LOCKERTEAM™ :)', 1, 'md')
 				end
 			else
 				if lang then
@@ -914,9 +914,9 @@ end
 			local expi = redis:ttl('ExpireDate:'..msg.to.id)
 			if expi == -1 then
 				if lang then
-					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_گروه به صورت نامحدود شارژ میباشد!_', 1, 'md')
+					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_گروه به صورت نامحدود شارژ میباشد! 💥 @LOCKERTEAM™ :)_', 1, 'md')
 				else
-					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_Unlimited Charging!_', 1, 'md')
+					tdcli.sendMessage(msg.to.id, msg.id_, 1, '_Unlimited Charging! 💥 @LOCKERTEAM™ :)_', 1, 'md')
 				end
 			else
 				local day = math.floor(expi / 86400) + 1
@@ -1093,12 +1093,12 @@ matches[3] then
 		local send_file = 
 "./"..matches[2].."/"..matches[3]
 		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 
-1, nil, send_file, '@MahDiRoO', dl_cb, nil)
+1, nil, send_file, '💥 @LOCKERTEAM™ :)', dl_cb, nil)
 	end
 	if matches[1]:lower() == "sendplug" and matches[2] or matches[1]:lower() == "Sendplug" and matches[2] then
 	    local plug = "./plugins/"..matches[2]..".lua"
 		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 
-1, nil, plug, '@MahDiRoO', dl_cb, nil)
+1, nil, plug, '💥 @LOCKERTEAM™ :)', dl_cb, nil)
     end
   end
 
@@ -1158,7 +1158,7 @@ return chat_list(msg)
 	   tdcli.sendMessage(matches[2], 0, 1, "Group has been removed by admin command", 1, 'html')
     return '_Group_ *'..matches[2]..'* _removed_'
 		end
-if matches[1] == 'matador' or matches[1] == 'Matador' then
+if matches[1] == 'spider' or matches[1] == 'SPIDER' then
 return tdcli.sendMessage(msg.to.id, msg.id, 1, _config.info_text, 1, 'html')
     end
 if matches[1] == 'adminlist' and is_admin(msg) or matches[1] == 'Adminlist' and is_admin(msg) then
@@ -1215,7 +1215,7 @@ patterns = {
 "^([Ll]eave)$",		
 "^[!/#]([Aa]utoleave) (.*)$",
 "^([Aa]utoleave) (.*)$",	
-"^[!/#]([Mm]atador)$",
+"^[!/#]([Ss]pider)$",
 "^([Mm]atador)$",		
 "^[!/#]([Cc]reategroup) (.*)$",
 "^([Cc]reategroup) (.*)$",		
