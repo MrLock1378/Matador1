@@ -72,36 +72,3 @@ end
   end
   return arian
 end
-   local function rsusername_cb(extra, success, result)    
-     if success == 1 then
-      local user = result.peer_id
-      local name =  string.gsub(result.print_name, "_", " ")
-      local chatid = get_receiver(extra.msg)
-      local username = result.username
-      function round2(num, idp)
-      return tonumber(string.format("%." .. (idp or 0) .. "f", num))
-      end
-
-      local r = tonumber(chat_stat(extra.msg.to.id, extra.msg.to.type) or 0)
-
-      local hashs = 'msgs:'..result.peer_id..':'..extra.msg.to.id
-      local msgss = redis:get(hashs)
-      local percent = msgss / r * 100
-    return send_large_msg(chatid, "🌀نام شما👈 "..name.."\n\n🌀تعداد پیام ها ارسالی توسط شما👈 "..msgss.." {"..round2(percent).."در💯}\n\n  🌀تمام پیام های ارسال شده در گروه👈 "..r.."")
-
-    end
-end
-local function run(msg, matches)
-local chat_id = msg.to.id
---return chat_stat(chat_id)
-  resolve_username(msg.from.username, rsusername_cb, {msg=msg})
-end
-  return {
-    patterns = {
-      "^[!/](me)$",
-   "^[!/#]([Mm]e)$",
-   "^([Mm]e)$",
-    },
-    run = run
-  }
-end
