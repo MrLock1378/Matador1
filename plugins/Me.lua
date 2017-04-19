@@ -39,36 +39,3 @@ local function get_msgs_user_chat(user_id, chat_id)
   user_info.name = user_print_name(user)..' ['..user_id..']'
   return user_info
 end
-local function chat_stat(chat_id, typee)
-  -- Users on chat
-local hash = ''
-if typee == 'channel' then
-hash = 'channel:'..chat_id..':users'
-else
-  hash = 'chat:'..chat_id..':users'
-end
-  local users = redis:smembers(hash)
-  local users_info = {}
-
-  -- Get user info
-  for i = 1, #users do
-    local user_id = users[i]
-    local user_info = get_msgs_user_chat(user_id, chat_id)
-    table.insert(users_info, user_info)
-  end
-
-  -- Sort users by msgsد number
-  table.sort(users_info, function(a, b) 
-      if a.msgs and b.msgs then
-        return a.msgs > b.msgs
-      end
-    end)
- 
-  local arian = '0'
-  local text = 'users in this chat \n'
-  for k,user in pairs(users_info) do
-    --text = text..user.name..' = '..user.msgs..'\n'
-      arian = arian + user.msgs
-  end
-  return arian
-end
