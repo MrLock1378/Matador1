@@ -43,17 +43,17 @@ local function info_cb(arg, data)
 		 else
 		       text = text..'▪️ Your Rank : *Group Member*\n\n'
 			end
-         l local user_info = {} 
+     local user_info = {} 
   local uhash = 'user:'..data.id_
   local user = redis:hgetall(uhash)
   local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
-  text = text..'▪️ Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@LockerTeam
+  text = text..'Total messages : '..user_info_msgs..'\n\n'
+  text = text..' @LockerTeam '
   tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
    else
    tdcli.sendMessage(arg.chat_id, "", 0, "*User not found*", 0, "md")
-  end
+   end
 tdcli_function ({
     ID = "GetUser",
     user_id_ = data.sender_user_id_
@@ -95,17 +95,17 @@ local function info_by_username(arg, data)
 		 else
 		       text = text..'▪️ Your Rank : *Group Member*\n\n'
 			end
-         local user_info = {} 
+           local user_info = {} 
   local uhash = 'user:'..data.id_
   local user = redis:hgetall(uhash)
   local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
-  text = text..'▪️ Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@LockerTeam
+  text = text..'Total messages : '..user_info_msgs..'\n\n'
+  text = text..' @LockerTeam '
   tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
    else
    tdcli.sendMessage(arg.chat_id, "", 0, "*User not found*", 0, "md")
-  end
+   end
 end
 
 local function info_by_id(arg, data)
