@@ -461,17 +461,8 @@ administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = nil
     return tdcli.sendMessage(arg.chat_id, "", 0, "》👤کاربر "..user_name.." *"..data.id_.."* *از مقام معاون گروه برکنار شد*✔️", 0, "md")
    end
 end
-   if cmd == "id" then
+  if cmd == "id" then
     return tdcli.sendMessage(arg.chat_id, "", 0, "*"..data.id_.."*", 0, "md")
-			local user_info = {} 
-  local uhash = 'user:'..data.id_
-  local user = redis:hgetall(uhash)
-  local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
-  user_info_msgs = tonumber(redis:get(um_hash) or 0)
-  text = text..'Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@LockerTeam'
-  tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
-end
 end
     if cmd == "res" then
     if not lang then
