@@ -1,4 +1,3 @@
---Begin info.lua By @MahDiRoO
 local Solid = 157059515
 local function setrank(msg, user_id, value,chat_id)
   local hash = nil
@@ -29,19 +28,19 @@ local function info_cb(arg, data)
   lastname = ""
   end
 	local hash = 'rank:'..arg.chat_id..':variables'
-   local text = "▪️ Your name :_ *"..firstname.."*\n▪️ Your Lastname :_ *"..lastname.."*\n▪️ Your Username :_ "..username.."\n▪️ Your ID :_ *"..data.id_.."*\n\n"
+   local text = "_▪️First name :_ *"..firstname.."*\n_▪️Last name :_ *"..lastname.."*\n_▪️Username :_ "..username.."\n_▪️ID :_ *"..data.id_.."*\n\n"
 		    if data.id_ == tonumber(Solid) then
-		       text = text..'▪️ Your Rank : *Executive Admin*\n\n'
+		       text = text..'_▪️Rank :_ *Executive Admin*\n\n'
 			   elseif is_sudo1(data.id_) then
-	           text = text..'▪️ Your Rank : *Full Access Admin*\n\n'
+	           text = text..'_▪️Rank :_ *Full Access Admin*\n\n'
 		     elseif is_admin1(data.id_) then
-		       text = text..'▪️ Your Rank : *Bot Admin*\n\n'
+		       text = text..'_▪️Rank :_ *Bot Admin*\n\n'
 		     elseif is_owner1(arg.chat_id, data.id_) then
-		       text = text..'▪️ Your Rank :*Group Owner*\n\n'
+		       text = text..'_▪️Rank :_ *Group Owner*\n\n'
 		     elseif is_mod1(arg.chat_id, data.id_) then
-		       text = text..'▪️ Your Rank : *Group Moderator*\n\n'
+		       text = text..'_▪️Rank :_ *Group Moderator*\n\n'
 		 else
-		       text = text..'▪️ Your Rank : *Group Member*\n\n'
+		       text = text..'_▪️Rank :_ *Group Member*\n\n'
 			end
          local user_info = {} 
   local uhash = 'user:'..data.id_
@@ -79,19 +78,19 @@ local function info_by_username(arg, data)
   lastname = ""
   end
 	local hash = 'rank:'..arg.chat_id..':variables'
-   local text = "▪️ Your name :_ *"..firstname.."*\n▪️ Your Last name :_ *"..lastname.."*\n▪️ Your Username :_ "..username.."\n▪️ Your ID :_ *"..data.id_.."*\n\n"
+   local text = "_▪️First name :_ *"..firstname.."*\n_▪️Last name :_ *"..lastname.."*\n_▪️Username :_ "..username.."\n_▪️ID :_ *"..data.id_.."*\n\n"
 		    if data.id_ == tonumber(Solid) then
-		       text = text..'▪️ Your Rank : *Executive Admin*\n\n'
+		       text = text..'_Rank :_ ▪️*Executive Admin*\n\n'
 			   elseif is_sudo1(data.id_) then
-	           text = text..'▪️ Your Rank : *Full Access Admin*\n\n'
+	           text = text..'_Rank :_ ▪️*Full Access Admin*\n\n'
 		     elseif is_admin1(data.id_) then
-		       text = text..'▪️ Your Rank : *Bot Admin*\n\n'
+		       text = text..'_Rank :_ ▪️*Bot Admin*\n\n'
 		     elseif is_owner1(arg.chat_id, data.id_) then
-		       text = text..'▪️ Your Rank : *Group Owner*\n\n'
+		       text = text..'_Rank :_ ▪️*Group Owner*\n\n'
 		     elseif is_mod1(arg.chat_id, data.id_) then
-		       text = text..'▪️ Your Rank : *Group Moderator*\n\n'
+		       text = text..'_Rank :_ ▪️*Group Moderator*\n\n'
 		 else
-		       text = text..'▪️ Your Rank : *Group Member*\n\n'
+		       text = text..'_Rank :_ ▪️*Group Member*\n\n'
 			end
          local user_info = {} 
   local uhash = 'user:'..data.id_
@@ -99,7 +98,7 @@ local function info_by_username(arg, data)
   local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'▪️Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@King_dis_love'
+  text = text..'@King_Dis_Love'
   tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
    else
    tdcli.sendMessage(arg.chat_id, "", 0, "*User not found*", 0, "md")
@@ -124,19 +123,19 @@ local function info_by_id(arg, data)
   lastname = ""
   end
 	local hash = 'rank:'..arg.chat_id..':variables'
-   local text = "▪️ Your name :_ *"..firstname.."*\n▪️ Your Last name :_ *"..lastname.."*\n▪️ Your Username :_ "..username.."\n▪️ Your ID :_ *"..data.id_.."*\n\n"
+   local text = "_▪️First name :_ *"..firstname.."*\n_▪️Last name :_ *"..lastname.."*\n_▪️Username :_ "..username.."\n_▪️ID :_ *"..data.id_.."*\n\n"
 		    if data.id_ == tonumber(Solid) then
-		       text = text..'▪️ Your Rank : *Executive Admin*\n\n'
+		       text = text..'_▪️Rank :_ ▪️*Executive Admin*\n\n'
 			   elseif is_sudo1(data.id_) then
-	           text = text..'▪️ Your Rank : *Full Access Admin*\n\n'
+	           text = text..'_▪️Rank :_ ▪️*Full Access Admin*\n\n'
 		     elseif is_admin1(data.id_) then
-		       text = text..'▪️ Your Rank : *Bot Admin*\n\n'
+		       text = text..'_▪️Rank :_ ▪️*Bot Admin*\n\n'
 		     elseif is_owner1(arg.chat_id, data.id_) then
-		       text = text..'▪️ Your Rank : *Group Owner*\n\n'
+		       text = text..'_▪️Rank :_ ▪️*Group Owner*\n\n'
 		     elseif is_mod1(arg.chat_id, data.id_) then
-		       text = text..'▪️ Your Rank : *Group Moderator*\n\n'
+		       text = text..'_▪️Rank :_ ▪️*Group Moderator*\n\n'
 		 else
-		       text = text..'▪️ Your Rank : *Group Member*\n\n'
+		       text = text..'_▪️Rank :_ ▪️*Group Member*\n\n'
 			end
          local user_info = {} 
   local uhash = 'user:'..data.id_
@@ -144,7 +143,7 @@ local function info_by_id(arg, data)
   local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'▪️Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@King_dis_love'
+  text = text..'@LockerTeam'
   tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
    else
    tdcli.sendMessage(arg.chat_id, "", 0, "*User not found*", 0, "md")
@@ -195,19 +194,19 @@ local function info2_cb(arg, data)
   lastname = ""
   end
 	local hash = 'rank:'..arg.chat_id..':variables'
-   local text = "▪️ Your Name : *"..firstname.."*\n▪️ Your Lastname: *"..lastname.."*\n▪️ Your Username : _ "..username.."\n▪️ Your ID :  *"..data.id_.."*\n\n"
+   local text = "_▪️First name :_ *"..firstname.."*\n_▪️Last name :_ *"..lastname.."*\n_▪️Username :_ "..username.."\n_▪️ID :_ *"..data.id_.."*\n\n"
 		    if data.id_ == tonumber(Solid) then
-		       text = text..'▪️ Your Rank : *Executive Admin*\n\n'
+		       text = text..'_▪️Rank :_ ▪️*Executive Admin*\n\n'
 			   elseif is_sudo1(data.id_) then
-	           text = text..'▪️ Your Rank : *Full Access Admin*\n\n'
+	           text = text..'_▪️Rank :_ ▪️*Full Access Admin*\n\n'
 		     elseif is_admin1(data.id_) then
-		       text = text..'▪️ Your Rank : *Bot Admin*\n\n'
+		       text = text..'_▪️Rank :_ ▪️*Bot Admin*\n\n'
 		     elseif is_owner1(arg.chat_id, data.id_) then
-		       text = text..'▪️ Your Rank : *Group Owner*\n\n'
+		       text = text..'_▪️Rank :_ ▪️*Group Owner*\n\n'
 		     elseif is_mod1(arg.chat_id, data.id_) then
-		       text = text..'▪️ Your Rank : *Group Moderator*\n\n'
+		       text = text..'_▪️Rank :_ ▪️*Group Moderator*\n\n'
 		 else
-		       text = text..'▪️ Your Rank : *Group Member*\n\n'
+		       text = text..'_▪️Rank :_ ▪️*Group Member*\n\n'
 		 end
          local user_info = {} 
   local uhash = 'user:'..data.id_
@@ -215,7 +214,7 @@ local function info2_cb(arg, data)
   local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'▪️Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@LockerTeam'
+  text = text..'@King_dis_love'
   tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
    end
 end
