@@ -211,7 +211,7 @@ function run(msg, matches)
 		if res ~= 200 then
 			return "No connection :)"
 		end
-		local colors = {'Deep Pink','Cadet Blue','Aqua','Dark Red','black','blue','green','yellow','magenta','Orange','DarkOrange','red'}
+		local colors = {'black','blue','green','yellow','magenta','Orange','DarkOrange','red'}
 		local fonts = {'mathbf','mathit','mathfrak','mathrm'}
 		local jdat = json:decode(url)
 		local url = 'http://latex.codecogs.com/png.download?'..'\\dpi{600}%20\\huge%20\\'..fonts[math.random(#fonts)]..'{{\\color{'..colors[math.random(#colors)]..'}'..jdat.ENtime..'}}'
@@ -301,36 +301,7 @@ end
 		local  file = download_to_file(url,'text.jpg')
 		tdcli.sendPhoto(msg.to.id, 0, 0, 1, nil, file, "💥 @Lokerteam™ :)", dl_cb, nil)
 	end
-	---------------------------------
-	if matches[1]:lower() == "joke" or  matches[1]:lower() == "Goke" or matches[1]:lower() ==  "جوک" then 
-local database = 'http://vip.opload.ir/vipdl/94/11/amirhmz/'
-local function run(msg)
-	local res = http.request(database.."joke.db")
-	local joke = res:split(",")
-	return joke[math.random(#joke)]
-end
---Joke Plugin v1.0 By @LockerTeam
-return {
-	description = "500 Persian Joke",
-	usage = "!joke : send random joke",
-	run = run
-}
-	end
---------------------------------
-	if matches[1]:lower() == "fal" or  matches[1]:lower() == "Fal" or matches[1]:lower() ==  "فال" then 
-	local database = 'http://vip.opload.ir/vipdl/95/1/amirhmz/'
-local function run(msg)
-	local res = http.request(database.."fal.db")
-	local fal = res:split(",") 
-	return fal[math.random(#fal)]
-end
---Fal Hafez Plugin v1.0 By @LockerTeam
-return {
-	description = "500 Fal Hafez",
-	usage = "!joke : send random fal",
-	run = run
-}
-	end
+
 end
 --------------------------------
 return {               
